@@ -1,5 +1,7 @@
 import "./App.css";
 import Grid from "./components/Grid";
+import RowGroup from "./components/RowGroup";
+import SyncFusion from "./components/SyncFusion";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         </a>
       </header> */}
       <Grid></Grid>
+      <RowGroup></RowGroup>
+      <SyncFusion></SyncFusion>
     </div>
   );
 }
