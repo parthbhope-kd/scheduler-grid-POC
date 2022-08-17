@@ -41,6 +41,7 @@ const Grid = (gridProps: any) => {
           field: "total",
           width: 100,
           filter: "agNumberColumnFilter",
+          
         },
         {
           columnGroupShow: "open",
@@ -229,14 +230,29 @@ const Grid = (gridProps: any) => {
           ],
     },
   ]);
-
+  const col2:any[] = [{ field: "country", rowGroup: true },
+  { field: "sport", rowGroup: false },];
+  const row2:any[]= [
+    { 'country': 'United States', 'sport': 'Biking' },
+    { 'country': 'United States', 'sport': 'Swimming', },
+    { 'country': 'United States', 'sport': 'Swimming' },
+    { 'country': 'Turkey',        'sport': 'Swimming', },
+    { 'country': 'Turkey',        'sport': 'Swimming' },
+    { 'country': 'Brasil',        'sport': 'Football' },
+  ]
+;
   return (
     <div style={containerStyle}>
       <p>This is the component</p>
+      
       <div
         style={{ width: "90%", height: 330, marginLeft: 36 }}
         className="ag-theme-alpine"
       >
+        <AgGridReact 
+      columnDefs={col2}
+      rowData={row2} 
+      ></AgGridReact>
         {/* <Cell></Cell> */}
         <AgGridReact
           rowData={data}

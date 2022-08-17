@@ -1,5 +1,9 @@
 import "./App.css";
+import AgGrid from "./components/AgGrid";
+import ExpandIt from "./components/ExpandIt";
+import Expander from "./components/ExpandIt/expander";
 import Grid from "./components/Grid";
+import NestedGrid from "./components/NestedGrid";
 import RowGroup from "./components/RowGroup";
 import SyncFusion from "./components/SyncFusion";
 
@@ -16,13 +20,16 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
           Learn React
-        </a>
-      </header> */}
+          </a>
+        </header> */}
+      <ExpandIt></ExpandIt>
+      <AgGrid></AgGrid>
       <Grid></Grid>
-      <RowGroup></RowGroup>
-      <SyncFusion></SyncFusion>
+      {/* <NestedGrid></NestedGrid> */}
+      {/* <RowGroup></RowGroup> */}
+      {/* <SyncFusion></SyncFusion> */}
     </div>
   );
 }
